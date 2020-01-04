@@ -10,8 +10,7 @@
 	display: grid;
 }
 
-/* Screen larger than 600px? 1 column */
-@media (min-width: 375px) {
+@media (max-width: 375px), (min-width: 376px) {
 	.countries {
 		grid-template-columns: repeat(1, 1fr);
 		grid-gap: 2rem;
@@ -29,8 +28,24 @@
 
 @media (min-width: 800px) {
 	.countries {
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 5rem;
+	}
+	.filters {
+		flex-direction: row;
+	}
+	.filter-region-wrapper {
+		margin-top: 0;
+	}
+	.search-wrapper {
+		width: 40rem;
+	}
+}
+
+@media (min-width: 1110px) {
+	.countries {
 		grid-template-columns: repeat(4, 1fr);
-		grid-gap: 7rem;
+		grid-gap: 5rem;
 	}
 	.filters {
 		flex-direction: row;
