@@ -13,7 +13,9 @@ const Navbar = () => {
 					name="colourModeToggle"
 					id="colourModeToggle"
 				/>
-				<label htmlFor="colourModeToggle">Dark Mode</label>
+				<label htmlFor="colourModeToggle" className="stronger-font">
+					Dark Mode
+				</label>
 			</div>
 		</nav>
 	);

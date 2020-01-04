@@ -31,3 +31,7 @@ input[type="search"]::-webkit-search-results-decoration {
 	margin-left: 5%;
 	margin-right: 5%;
 }
+
+.stronger-font {
+	font-weight: 600;
+}

@@ -16,6 +16,7 @@
 	font-family: "Nunito Sans";
 	font-weight: 600;
 	font-size: 14px;
+	width: 85%;
 }
 
 #searchCountry:focus {
