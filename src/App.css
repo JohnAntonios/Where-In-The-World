@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
+.filters {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 3rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.countries {
+	display: grid;
+	grid-gap: 5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.country-card {
+	background-color: dodgerblue;
+	color: white;
+	padding: 1rem;
+	height: 4rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Screen larger than 600px? 1 column */
+@media (min-width: 375px) {
+	.countries {
+		grid-template-columns: repeat(1, 1fr);
+		grid-gap: 2rem;
+	}
+	.filters {
+		flex-direction: column;
+	}
+	.filter-region-wrapper {
+		margin-top: 2rem;
+	}
+	.search-wrapper {
+		width: 90%;
+	}
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media (min-width: 800px) {
+	.countries {
+		grid-template-columns: repeat(4, 1fr);
+	}
+	.filters {
+		flex-direction: row;
+	}
+	.filter-region-wrapper {
+		margin-top: 0;
+	}
+	.search-wrapper {
+		width: 40rem;
+	}
 }
