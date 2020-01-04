@@ -20,6 +20,14 @@ const App = () => {
 		console.log(countries);
 		setCountries(countries);
 	};
+	/*
+		JSON SCHEMA FOR API CALL:
+		country.
+				name = Name of the country in a string.
+				alpha2Code = Abbreviated name of the country.
+				region = Name of the region the country belongs to.
+				flag = SVG url of the flag to display.
+	*/
 
 	return (
 		<div>
@@ -34,6 +42,7 @@ const App = () => {
 					<CountryCard
 						key={country.alpha2Code}
 						countryName={country.name}
+						countryFlagUrl={country.flag}
 					/>
 				))}
 			</section>

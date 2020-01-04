@@ -11,13 +11,6 @@
 	grid-gap: 5rem;
 }
 
-.country-card {
-	background-color: dodgerblue;
-	color: white;
-	padding: 1rem;
-	height: 4rem;
-}
-
 /* Screen larger than 600px? 1 column */
 @media (min-width: 375px) {
 	.countries {
