@@ -5,10 +5,26 @@ const CountryCard = props => {
 	return (
 		<div className="country-card">
 			<div className="country-flag-wrapper">
-				<img src={props.countryFlagUrl} className="country-flag"></img>
+				<img src={props.flag} className="country-flag"></img>
 			</div>
 
-			{props.countryName}
+			<div className="country-content">
+				<h3 className="country-name">{props.name}</h3>
+				<ul className="country-details">
+					<li>
+						<strong>Population: </strong>
+						{props.population.toLocaleString()}
+					</li>
+					<li>
+						<strong>Region: </strong>
+						{props.region}
+					</li>
+					<li>
+						<strong>Capital: </strong>
+						{props.capital}
+					</li>
+				</ul>
+			</div>
 		</div>
 	);
 };

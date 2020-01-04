@@ -1,8 +1,8 @@
 .country-card {
 	background-color: white;
 	color: black;
-	border-bottom-left-radius: 20px;
-	border-bottom-right-radius: 20px;
+	border-radius: 20px;
+	box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 .country-flag-wrapper {
@@ -16,4 +16,13 @@
 	object-fit: cover;
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
+}
+
+.country-content {
+	padding: 0.5rem 1rem 3rem 2rem;
+}
+
+.country-details {
+	list-style: none;
+	padding: 0;
 }

@@ -27,6 +27,8 @@ const App = () => {
 				alpha2Code = Abbreviated name of the country.
 				region = Name of the region the country belongs to.
 				flag = SVG url of the flag to display.
+				population = Population of the Country, a number.
+				capital = Name of the capital of the country.
 	*/
 
 	return (
@@ -41,8 +43,11 @@ const App = () => {
 				{countries.map(country => (
 					<CountryCard
 						key={country.alpha2Code}
-						countryName={country.name}
-						countryFlagUrl={country.flag}
+						name={country.name}
+						flag={country.flag}
+						population={country.population}
+						region={country.region}
+						capital={country.capital}
 					/>
 				))}
 			</section>
