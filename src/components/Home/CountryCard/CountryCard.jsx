@@ -5,7 +5,11 @@ const CountryCard = props => {
 	return (
 		<div className="country-card">
 			<div className="country-flag-wrapper">
-				<img src={props.flag} className="country-flag"></img>
+				<img
+					src={props.flag}
+					className="country-flag"
+					alt={props.name}
+				></img>
 			</div>
 
 			<div className="country-content">

@@ -5,7 +5,6 @@ import CountryDetails from "./CountryDetails/CountryDetails";
 
 const Country = props => {
 	const [country, setCountry] = useState({});
-	const [borderCountries, setBorderCountries] = useState([]);
 
 	useEffect(() => {
 		fetchCountry(props.match.params.code);
@@ -16,10 +15,6 @@ const Country = props => {
 			`https://restcountries.eu/rest/v2/alpha/${code}`
 		);
 		const countryData = await data.json();
-
-		console.log(countryData);
-
-		const borderCountriesCodes = countryData.borders;
 
 		setCountry(countryData);
 	};

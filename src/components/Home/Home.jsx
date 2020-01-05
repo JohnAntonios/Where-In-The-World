@@ -8,18 +8,23 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
 	const [countries, setCountries] = useState([]);
+	const [resultCountries, setResultCountries] = useState([]);
 
 	useEffect(() => {
 		fetchCountries();
 	}, []);
+
+	const filterResults = countryResults => {
+		setResultCountries(countryResults);
+	};
 
 	const fetchCountries = async () => {
 		const data = await fetch("https://restcountries.eu/rest/v2/all");
 
 		const countries = await data.json();
 
-		console.log(countries);
 		setCountries(countries);
+		setResultCountries(countries);
 	};
 	/*
 		JSON SCHEMA FOR API CALL:
@@ -34,12 +39,18 @@ const Home = () => {
 	return (
 		<div>
 			<section className="align filters">
-				<SearchCountry />
-				<FilterRegion />
+				<SearchCountry
+					countries={countries}
+					parentCallback={filterResults}
+				/>
+				<FilterRegion
+					countries={countries}
+					parentCallback={filterResults}
+				/>
 			</section>
 
 			<section className="align countries">
-				{countries.map(country => (
+				{resultCountries.map(country => (
 					<Link
 						to={`/country/${country.alpha2Code}`}
 						key={country.alpha2Code}
