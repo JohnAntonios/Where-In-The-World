@@ -1,0 +1,15 @@
+.theme-mode-wrapper {
+	margin-right: 5%;
+}
+
+#themeModeToggle {
+	visibility: hidden;
+}
+
+.theme-icon-wrapper {
+	margin-right: 1rem;
+}
+
+.theme-label-wrapper {
+	cursor: pointer;
+}
