@@ -20,3 +20,66 @@
 .back-btn svg {
 	margin-right: 1rem;
 }
+
+.country-details-wrapper {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+.flag-wrapper {
+	max-width: 700px;
+	max-height: 700px;
+}
+
+.flag-wrapper img {
+	width: 100%;
+}
+
+.country-info-wrapper {
+	padding-left: 5rem;
+	padding-top: 1rem;
+}
+
+.country-info-lists-wrapper {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: center;
+}
+
+.country-info-left,
+.country-info-right {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+.country-info-left li,
+.country-info-right li {
+	margin-bottom: 1rem;
+}
+
+.country-info-right {
+	margin-left: 4rem;
+}
+
+@media (max-width: 850px) {
+	.country-info-wrapper {
+		padding: 0;
+	}
+	.country-details-wrapper {
+		flex-wrap: wrap;
+	}
+	.country-info-lists-wrapper {
+		flex-direction: column;
+	}
+	.country-info-left,
+	.country-info-right {
+		text-align: left;
+	}
+	.country-info-right {
+		margin: 0;
+		margin-top: 2rem;
+	}
+}

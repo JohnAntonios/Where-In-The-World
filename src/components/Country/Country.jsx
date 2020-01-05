@@ -62,75 +62,85 @@ const Country = props => {
 					<img src={country.flag} alt={country.name} />
 				</div>
 				<div className="country-info-wrapper">
-					<h3>{country.name}</h3>
-					<ul className="country-info">
-						<li>
-							<strong>Native Name: </strong>
-							{country.nativeName}
-						</li>
-						<li>
-							<strong>Population: </strong>
-							{country.population == null || undefined || ""
-								? null
-								: country.population.toLocaleString()}
-						</li>
-						<li>
-							<strong>Region: </strong>
-							{country.region}
-						</li>
-						<li>
-							<strong>Sub Region: </strong>
-							{country.subregion}
-						</li>
-						<li>
-							<strong>Capital: </strong>
-							{country.capital}
-						</li>
-						<li>
-							<strong>Top Level Domain: </strong>
-							{country.topLevelDomain}
-						</li>
-						<li>
-							<strong>Currencies: </strong>
-							{country.currencies == null || undefined ? (
-								<h3>
-									This country has no currencies or it is stil
-									loading the data...
-								</h3>
-							) : (
-								country.currencies.map((currency, index) => {
-									if (
-										country.currencies.length <= 1 ||
-										index === country.currencies.length - 1
-									) {
-										return currency.name;
-									} else {
-										return `${currency.name}, `;
-									}
-								})
-							)}
-						</li>
-						<li>
-							<strong>Languages: </strong>
-							{country.languages == null || undefined ? (
-								<h3>
-									This country has no languages or it is stil
-									loading the data...
-								</h3>
-							) : (
-								country.languages.map((language, index) => {
-									if (
-										country.languages.length <= 1 ||
-										index === country.languages.length - 1
-									) {
-										return language.name;
-									} else {
-										return `${language.name}, `;
-									}
-								})
-							)}
-						</li>
-					</ul>
+					<h2>{country.name}</h2>
+					<div className="country-info-lists-wrapper">
+						<ul className="country-info-left">
+							<li>
+								<strong>Native Name: </strong>
+								{country.nativeName}
+							</li>
+							<li>
+								<strong>Population: </strong>
+								{country.population == null || undefined || ""
+									? null
+									: country.population.toLocaleString()}
+							</li>
+							<li>
+								<strong>Region: </strong>
+								{country.region}
+							</li>
+							<li>
+								<strong>Sub Region: </strong>
+								{country.subregion}
+							</li>
+							<li>
+								<strong>Capital: </strong>
+								{country.capital}
+							</li>
+						</ul>
+						<ul className="country-info-right">
+							<li>
+								<strong>Top Level Domain: </strong>
+								{country.topLevelDomain}
+							</li>
+							<li>
+								<strong>Currencies: </strong>
+								{country.currencies == null || undefined ? (
+									<h3>
+										This country has no currencies or it is
+										stil loading the data...
+									</h3>
+								) : (
+									country.currencies.map(
+										(currency, index) => {
+											if (
+												country.currencies.length <=
+													1 ||
+												index ===
+													country.currencies.length -
+														1
+											) {
+												return currency.name;
+											} else {
+												return `${currency.name}, `;
+											}
+										}
+									)
+								)}
+							</li>
+							<li>
+								<strong>Languages: </strong>
+								{country.languages == null || undefined ? (
+									<h3>
+										This country has no languages or it is
+										stil loading the data...
+									</h3>
+								) : (
+									country.languages.map((language, index) => {
+										if (
+											country.languages.length <= 1 ||
+											index ===
+												country.languages.length - 1
+										) {
+											return language.name;
+										} else {
+											return `${language.name}, `;
+										}
+									})
+								)}
+							</li>
+						</ul>
+					</div>
 				</div>
 				<div className="border-countries-wrapper">
 					{country.borders == null || undefined ? (
