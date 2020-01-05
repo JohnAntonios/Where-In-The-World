@@ -142,7 +142,9 @@ const Country = props => {
 						</ul>
 					</div>
 					<div className="border-countries-wrapper">
-						<h3>Border Countries: </h3>
+						<span className="border-countries-title">
+							<strong>Border Countries:</strong>
+						</span>
 						<div className="border-countries-btn-list-wrapper">
 							{country.borders == null || undefined ? (
 								<h3>

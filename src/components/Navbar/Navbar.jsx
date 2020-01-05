@@ -1,11 +1,14 @@
 import React from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
 	return (
 		<nav className="main-nav">
 			<div className="home-link">
-				<h3>Where in the world?</h3>
+				<Link to="/">
+					<h3>Where in the world?</h3>
+				</Link>
 			</div>
 			<div className="colour-mode-wrapper">
 				<input
