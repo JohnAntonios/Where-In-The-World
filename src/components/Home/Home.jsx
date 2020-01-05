@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./Home.css";
-import SearchCountry from "../SearchCountry/SearchCountry";
-import FilterRegion from "../FilterRegion/FilterRegion";
-import CountryCard from "../CountryCard/CountryCard";
+import SearchCountry from "./SearchCountry/SearchCountry";
+import FilterRegion from "./FilterRegion/FilterRegion";
+import CountryCard from "./CountryCard/CountryCard";
 
 import { Link } from "react-router-dom";
 
