@@ -62,7 +62,7 @@ const Country = props => {
 					<img src={country.flag} alt={country.name} />
 				</div>
 				<div className="country-info-wrapper">
-					<h2>{country.name}</h2>
+					<h2 className="country-info-name">{country.name}</h2>
 					<div className="country-info-lists-wrapper">
 						<ul className="country-info-left">
 							<li>
@@ -141,18 +141,22 @@ const Country = props => {
 							</li>
 						</ul>
 					</div>
-				</div>
-				<div className="border-countries-wrapper">
-					{country.borders == null || undefined ? (
-						<h3>
-							Country has no borders or data is still loading...
-						</h3>
-					) : (
-						// Pass the border calling code as a prop to each BorderBUtton component and render properly.
-						country.borders.map(border => (
-							<button key={border}>{border}</button>
-						))
-					)}
+					<div className="border-countries-wrapper">
+						<h3>Border Countries: </h3>
+						<div className="border-countries-btn-list-wrapper">
+							{country.borders == null || undefined ? (
+								<h3>
+									Country has no borders or data is still
+									loading...
+								</h3>
+							) : (
+								// Pass the border calling code as a prop to each BorderBUtton component and render properly.
+								country.borders.map(border => (
+									<button key={border}>Country Name</button>
+								))
+							)}
+						</div>
+					</div>
 				</div>
 			</section>
 		</div>
