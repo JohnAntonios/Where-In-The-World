@@ -33,16 +33,19 @@ const Home = () => {
 	*/
 	return (
 		<div>
-			<section className="filters align">
+			<section className="align filters">
 				<SearchCountry />
 				<FilterRegion />
 			</section>
 
 			<section className="align countries">
 				{countries.map(country => (
-					<Link to={`/country/${country.alpha2Code}`}>
+					<Link
+						to={`/country/${country.alpha2Code}`}
+						key={country.alpha2Code}
+					>
 						<CountryCard
-							key={country.alpha2Code}
+							key={country.name}
 							name={country.name}
 							flag={country.flag}
 							population={country.population}
