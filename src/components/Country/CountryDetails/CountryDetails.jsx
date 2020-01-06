@@ -84,23 +84,20 @@ const CountryDetails = ({ country }) => {
 				</div>
 				<div className="border-countries-wrapper">
 					<span className="border-countries-title">
-						<strong>Border Countries:</strong>
+						{country.borders !== undefined &&
+						country.borders.length === 0 ? null : (
+							<strong>Border Countries:</strong>
+						)}
 					</span>
 					<div className="border-countries-btn-list-wrapper">
-						{country.borders == null || undefined ? (
-							<h3>
-								Country has no borders or data is still
-								loading...
-							</h3>
-						) : (
-							// Pass the border calling code as a prop to each BorderBUtton component and render properly.
-							country.borders.map(border => (
-								<BorderCountryBtn
-									countryCode={border}
-									key={border}
-								/>
-							))
-						)}
+						{country.borders == undefined || null
+							? null
+							: country.borders.map(border => (
+									<BorderCountryBtn
+										countryCode={border}
+										key={border}
+									/>
+							  ))}
 					</div>
 				</div>
 			</div>

@@ -12,3 +12,10 @@
 .border-countries-btn-list-wrapper button:focus {
 	outline: none;
 }
+
+@media (max-width: 1000px) {
+	.border-countries-btn-list-wrapper button {
+		margin: 0;
+		margin-top: 1rem;
+	}
+}

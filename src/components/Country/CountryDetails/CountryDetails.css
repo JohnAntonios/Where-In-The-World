@@ -5,7 +5,7 @@
 }
 
 .flag-wrapper {
-	width: 70rem;
+	width: 800px;
 }
 
 .flag-wrapper img {
@@ -16,13 +16,11 @@
 .country-info-wrapper {
 	padding-left: 5rem;
 	padding-top: 1rem;
-	width: 100%;
 }
 
 .country-info-lists-wrapper {
 	display: flex;
 	flex-direction: row;
-	width: 100%;
 }
 
 .country-info-left,
@@ -55,4 +53,32 @@
 
 .country-info-name {
 	font-size: 2rem;
+}
+
+@media (max-width: 1000px) {
+	.country-info-wrapper {
+		padding: 0;
+	}
+	.country-details-wrapper {
+		flex-wrap: wrap;
+	}
+	.country-info-lists-wrapper {
+		flex-direction: column;
+	}
+	.country-info-left,
+	.country-info-right {
+		text-align: left;
+	}
+	.country-info-right {
+		margin: 0;
+		margin-top: 2rem;
+	}
+	.border-countries-wrapper {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.border-countries-btn-list-wrapper {
+		flex-direction: column;
+		margin-bottom: 3rem;
+	}
 }
